@@ -13,9 +13,21 @@
 <script type="text/Javascript">
 	window.onload = function(){
     	document.getElementById('btn').onclick = function(){
-
- 
+			
+    		// 1. id로 찾기
+    		// 1) let userName = document.getElementById('userName');
+    		// 2) let userName = document.querySelector('#userName');
+    		
+    		// 2. 폼태그 안에 있는 경우 name으로 찾을수 있음 
+    		// let username	= document.frm.username;
+    		let username	= document.froms[0].username;
+    		
+    		let result	 = document.getElementById('result');
+ 			result.innerHTML = userName.value + '님 반갑';
     	}
+    	
+    	
+    		
     }
 </script>
 </head>
