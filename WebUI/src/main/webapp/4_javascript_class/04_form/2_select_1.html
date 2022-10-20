@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <title> 이벤트 예제 2 </title>
 <script type="text/javascript">
+window.onload = function(){
+	// name으로 찾을때는 반드시 form테그가 있어야한다.
+	let mango	= frm.mango;
+	let avocado	= frm.avocado;
+	
+	mango.onchange = calc; // 연결만 시켜야함 calc() 절대 사용금지
+	avocado.onchange = calc;
+	
+	function calc() {
+		//alert( mango.value*4000 );
+		frm.total.value = mango.value*4000 + avocado.value*5000;
+	}
+}
+
+
 </script>
 	
 </head>
