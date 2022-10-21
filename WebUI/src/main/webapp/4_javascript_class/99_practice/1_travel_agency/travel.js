@@ -16,21 +16,19 @@ window.onload = function(){
 	
 	// 결제하기 이벤트
 
-	
-			let payment = document.getElementById('payment');
-			payment.onsubmit = function(evt){
+			let frm = document.getElementById('frm');
+			frm.onsubmit = function(evt){
 			evt.stopPropagation();
 			evt.preventDefault();
 			
-			alert(checkbox.checked);
-			alert(checkbox2.checked);
-			if(! checkbox.checked || checkbox2.checked ){
+			if(! checkbox.checked || ! checkbox2.checked ){
 				alert('동의해주셔야 가능 합니다.')
 				return;
 			}
 			
+
 			
-			payment.submit();
+			frm.submit();
 		}
 
 	}

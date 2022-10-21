@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<form name="frm" id='frm' method="get" action="something.jsp">
 <table width="800" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><img src="img/travel_01.gif" width="800" height="102" /></td>
@@ -94,15 +95,15 @@
             <td><table width="560" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
               <tr>
                 <td width="80" height="25" bgcolor="F7F7F7"><span class="text1">한글이름</span></td>
-                <td width="170" height="25" bgcolor="#FFFFFF"><input name="name" type="text" id="name" size="6" />
+                <td width="170" height="25" bgcolor="#FFFFFF"><input name="name" type="text"  pattern='[가-힣]{2,5}' id="name" size="6" />
                   <input name="radio" type="radio" id="radio" value="radio" />
-                  <span class="text1">남자</span>  
+                  <span class="text1">남자</span>
                   <input type="radio" name="radio" id="radio2" value="radio" />
                    <span class="text1"> 여자  </span></td>
                 <td width="80" height="25" bgcolor="F7F7F7" class="text1">영문성/이름</td>
-                <td width="170" height="25" bgcolor="#FFFFFF"><input name="lastname" type="text" id="lastname" size="8" />
+                <td width="170" height="25" bgcolor="#FFFFFF"><input name="lastname" type="text" id="lastname" pattern='[A-Za-z]{2,8}'size="8" />
                   <span class="text1">/</span>
-                    <input name="firstname" type="text" id="firstname" size="6" /></td>
+                    <input name="firstname" type="text" id="firstname" pattern='[A-Za-z]{2,8}' size="6" /></td>
               </tr>
               <tr>
                 <td width="80" height="25" bgcolor="F7F7F7"><span class="text1">연령기준</span></td>
@@ -121,7 +122,7 @@
                 <td width="80" height="25" bgcolor="F7F7F7"><span class="text1">전화번호</span></td>
                 <td width="170" height="25" bgcolor="#FFFFFF">
                   <span class="text1">
-                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
                   </span></td>
                 <td width="80" height="25" bgcolor="F7F7F7" class="text1">이메일주소</td>
                 <td width="170" height="25" bgcolor="#FFFFFF"><input name="email" type="email" id="email" size="18" /></td>
@@ -181,7 +182,7 @@
                 <td colspan="6">&nbsp;</td>
                 </tr>
               <tr>
-                <td><input type='IMAGE' src="img/travel_button_01.gif" id='payment' name='submit' value='submit' align="absmiddle" width="84" height="27"></td>
+                <td><input type='IMAGE' src="img/travel_button_01.gif" id='payment' name='submit' value='submit' width="84" height="27"></td>
                 <td width="2">&nbsp;</td>
                 <td><img src="img/travel_button_02.gif" width="71" height="27" /></td>
                 <td width="2">&nbsp;</td>
@@ -202,5 +203,6 @@
     <td height="37" colspan="2" bgcolor="#000000"></td>
   </tr>
 </table>
+</form>
 </body>
 </html>
