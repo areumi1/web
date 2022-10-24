@@ -20,7 +20,7 @@
     		
     		// 2. 폼태그 안에 있는 경우 name으로 찾을수 있음 
     		// let username	= document.frm.username;
-    		let username	= document.froms[0].username;	// 폼테그하나가 배열방 1개
+    		let userName	= document.forms[0].username;	// 폼테그하나가 배열방 1개
     		
     		let result	 = document.getElementById('result');
  			result.innerHTML = userName.value + '님 반갑';
@@ -36,7 +36,6 @@
 	<!-- 폼태그 안에 있는 입력값은 서버로 전송할 수 있다  -->
 	<form name="frm">
 		당신의 이름은? <input type="text" id='userName' name='username' size="20">
-		이름 <input type="text" id='userName' name='username' size="15">
 		<input type="button" value="확인" id='btn'>
    	</form>
    	
