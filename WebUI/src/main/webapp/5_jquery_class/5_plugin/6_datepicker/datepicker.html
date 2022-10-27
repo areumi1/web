@@ -4,15 +4,35 @@
 <meta charset="UTF-8" />
 <title>Datepicker</title>
 <link rel="stylesheet" type="text/css"
-  href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
-<script type="text/javascript"  src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script type="text/javascript"   src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/i18n/jquery-ui-i18n.min.js"></script>
+	href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/i18n/jquery-ui-i18n.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.datepicker.setDefaults($.datepicker.regional['ko']); // 인터넷마다 다 다르게 나오기 때문에 같은 직접 지정함. // 한글로 변환
+		$('#datepicker').datepicker({ // 선택시 달력나옴 기본 한자
+			showOn : 'button', // 버튼누르면 달력나오게 설정
+			buttonImage : 'images/calendar.gif', // 이미지
+			showButtonPanel : true,  // 오늘, 닫기 버튼 나옴 (버튼패널)
+			showAnim 		: 'slideDown' // 애니메이션 효과 주기 (밑으로 스라이드)
+		}); // 날짜 지정또한 안에서 사용가능하다.
+		
+		// 날짜 지정 (추후에 날짜를 조작하여 나중에 변경시 )
+		let mydate = new Date('2020-02-02');
+		$('#datepicker').datepicker('setDate',mydate);
 
+	})
+</script>
 
 </head>
 <body>
-<label for="date">날짜:</label>
-<input id="datepicker" type="text">
+	<label for="date">날짜:</label>
+	<input id="datepicker" type="text">
+	<hr />
+	<input type='date'>
 </body>
 </html>

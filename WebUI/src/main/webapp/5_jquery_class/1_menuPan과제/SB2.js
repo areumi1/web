@@ -51,7 +51,6 @@ $(function() {
 				let Price = Number($(list[i]).find('td:eq(2)').text());
 				Price += Number(price) * Number(count);
 				$(list[i]).find('td:eq(2)').text(Price);
-				
 				flag = true;
 			}
 		}
@@ -67,7 +66,8 @@ $(function() {
 		}
 	});
 
-	$('#listTable').on('click', '.bttn', function() {
+	$('#listTable ').on('click', '.bttn', function() {
+
 		let price = $(this).parent().parent().find('td:eq(2)').text();
 		let count = $(this).parent().parent().find('td:eq(1)').text();
 		sum -= price * count;
@@ -75,6 +75,7 @@ $(function() {
 		$(this).closest("tr").remove();
 
 	});
+
 
 	$('#btn').click(function() {
 		let price = $(this).parent().parent().find('td:eq(2)').text();
@@ -84,7 +85,6 @@ $(function() {
 		if (!result) {
 			$('.jumun').remove();
 			$('#total').attr('value', 0);
-
 			sum = 0;
 			return false;
 		} else {
@@ -93,10 +93,20 @@ $(function() {
 			$(".menuCount").val('0');
 			sum = 0;
 			winObj = window.open("jumun.html", "", 'width=310, height=150');
-		}
-		
-		
+		}	
 	});
+	
+	
+	
+	$('#card').click(function(){
+			window.close();
+			
+		});
+		
+	$('.Btn').click(function(){
+			window.close();
+			
+		});
 
 
 
