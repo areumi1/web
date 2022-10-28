@@ -40,7 +40,7 @@ public void DBLoading(){
 				response.setContentType("applocaoion/vnd.ms-excle");  
 			}else if (type.equals("word")){
 			//(2). word   라면 word파일 형식으로 기술
-				response.setContentType("application/vnd.ms-word");	// 브라우저가 인식못하는 
+				response.setContentType("application/vnd.ms-word");	
 			}
 	}
 	//ContentType = 파일형식
