@@ -7,9 +7,9 @@
 <title> header와 footer 삽입하기</title>
 </head>
 <body>
-		<!--  include : 폴더 추가 -->
-		<%@ include file="04_header.jsp" %>   
-		
+
+		<%@ include file="04_header.jsp" %>
+
 		<hr><hr>
 		<!-- 메인 내용 시작  -->
 		
@@ -44,10 +44,10 @@
 				</div>
 			</div>
 		</div>
-		
+		<%@ include file="04_footer.jsp" %>
 		<!-- 메인 내용 끝  -->
 		<hr><hr>
-		<%@ include file="04_footer.jsp" %> 
+		
 
 </body>
 </html>

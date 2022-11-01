@@ -26,24 +26,25 @@ public void DBLoading(){
 
 
 <%-- MIME 타입 변경하기 --%>
-<%	
+<%
 	/*
-		요청(request) : 클라이언트 -> 서버
-		응답(response) : 서버 -> 클라이언트
+		요청(request) : 클라이언트 → 서버
+		응답(response): 서버 → 클라이언트 
 	*/
 	//1. request의 객체를 통해 type 이름의 값을 넘겨받는다
 	String type = request.getParameter("type");
+	
 	//2. null 이라면 html파일 형식이지만 기본값이기에 null이 아닌 경우
-	if ( type != null){   // type 값이 null 이아닌경우 
+	if(type!=null){	
+		
 			//(1). excel이라면 excel파일 형식으로 기술
-			if( type.equals("excel")){
-				response.setContentType("applocaoion/vnd.ms-excle");  
-			}else if (type.equals("word")){
+			if(type.equals("excel")){
+				response.setContentType("application/vnd.ms-excel");
+			}else if(type.equals("word")){
 			//(2). word   라면 word파일 형식으로 기술
-				response.setContentType("application/vnd.ms-word");	
+				response.setContentType("application/msword");	
 			}
 	}
-	//ContentType = 파일형식
 %>
 
 <!DOCTYPE html>

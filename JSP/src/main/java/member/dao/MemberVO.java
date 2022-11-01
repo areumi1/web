@@ -1,38 +1,35 @@
 package member.dao;
 
 public class MemberVO {
-	
-	String name;
-	String nickName;
-	String email;
-	int age;
-	
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getNickName() {
-		return nickName;
-	}
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
-	
 
+	String realname;
+	String nickname;
+	String myemail;
+	String myage;
+
+	// getter & setter
+	public String getRealname() {
+		return realname;
+	}
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getMyemail() {
+		return myemail;
+	}
+	public void setMyemail(String myemail) {
+		this.myemail = myemail;
+	}
+	public String getMyage() {
+		return myage;
+	}
+	public void setMyage(String myage) {
+		this.myage = myage;
+	}
 }

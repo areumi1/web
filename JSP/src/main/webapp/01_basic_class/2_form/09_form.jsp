@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>회원 가입</title>
 <!-- 외부 CSS 연결 -->
-<link rel="stylesheet" href="09_myform.css" type="text/css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href='09_myform.css'>
 
 </head>
 
