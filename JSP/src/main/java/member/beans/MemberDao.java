@@ -11,7 +11,7 @@ public class MemberDao {
 	// DB 연결시  관한 변수 
 
 	private static final String dbDriver	=	"oracle.jdbc.driver.OracleDriver";
-	private static final String	dbUrl		=	"jdbc:oracle:thin:@127.0.0.1:1521:xe";
+	private static final String	dbUrl		=	"jdbc:oracle:thin:@192.168.0.81:1521:xe";
 	private static final String	dbUser		=	"scott";
 	private static final String	dbPass		=	"tiger";
 	
@@ -49,11 +49,9 @@ public class MemberDao {
 		
 		try {
 			// 0. 연결 객체 얻어오기	
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			String user = "scott";
-			String pass = "tiger";
+
 			
-			con = DriverManager.getConnection(url, user, pass);
+			con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
 			System.out.println("연결성공");
 			
 			// 1. sql 문장 만들기 ( insert문 )
@@ -94,11 +92,9 @@ public class MemberDao {
 		
 		try{
 			// 0. 연결 객체 얻어오기	
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			String user = "scott";
-			String pass = "tiger";
+
 			
-			con = DriverManager.getConnection(url, user, pass);
+			con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
 			System.out.println("연결성공");
 			
 			// 1. sql 문장 만들기(select 문장)

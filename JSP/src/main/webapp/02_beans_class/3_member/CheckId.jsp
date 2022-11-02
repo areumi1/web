@@ -5,7 +5,7 @@
     
  <%
  	// 회원가입한 아이디값 받아오기
- 	String userId = request.getParameter("userid");
+ 	String userId = request.getParameter("userId");
  	MemberDao dao = MemberDao.getInstance();
  	boolean result = dao.isDuplicatedId(userId); // true or false
  %> 
